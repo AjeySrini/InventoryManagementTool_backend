@@ -8,7 +8,7 @@ productRoutes.post('/', async (req, res) => {
   try {
     const cproduct = new Product(req.body);
     await cproduct.save();
-    res.status(201).send("Product added successfully");
+    res.status(201).json({ 'msg': 'Product added Successfully' });
   } catch (error) {
     console.error(error);
     res.status(500).json({ error: 'Could not create the product.' });
