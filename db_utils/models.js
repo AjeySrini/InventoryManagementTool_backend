@@ -23,7 +23,7 @@ const productSchema = new mongoose.Schema({
     required: true,
   },
   supplier: {
-    type: String,
+    type: [String],
     required: true,
   },
   category_name: {
