@@ -35,7 +35,7 @@ productRoutes.put("/:id", async (req, res) => {
 
     if (product1) {
       await Product.updateOne({ product_id: userId }, { $set: req.body });
-      res.json({ msg: "Product added Successfully" });
+      res.json({ msg: "Product Updated Successfully" });
     } else {
       return res.status(404).json({ error: "Product not found." });
     }
